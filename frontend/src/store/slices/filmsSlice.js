@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchPopular = createAsyncThunk('films/fetchPopular', async () => {
-  const response = await fetch('http://localhost:5000/api/popular');
+  const response = await fetch('https://film-app-hs6h.onrender.com/api/popular');
   return response.json();
 });
 
 export const searchFilms = createAsyncThunk('films/search', async (query) => {
-  const response = await fetch(`http://localhost:5000/api/search?query=${query}`);
+const response = await fetch(`https://film-app-hs6h.onrender.com/api/search?query=${query}`);
   return response.json();
 });
 
